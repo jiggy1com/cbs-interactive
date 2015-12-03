@@ -62,7 +62,6 @@ function Blog(el, blogID){
 	this.APIKey 			= 'AIzaSyBMmDSKIlQWWOz4Ncn2zZWW9YTAR-C8a9M';
 	this.loading 			= false;
 	this.loadingComments 	= false;
-	this.currentPage 		= 0;
 	this.nextPageToken 		= '';
 	this.postTemplate		= "<div class='blog-post' id='post-{postID}'>" + 
 									"<h2>{blogTitle}</h2>" +
