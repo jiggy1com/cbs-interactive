@@ -262,13 +262,14 @@ Blog.prototype.monthAsString = function(m){
 };
 
 Blog.prototype.get12HourFormat = function(h){
-	if(h == 0){
-		return 12;
-	}else if(h <= 12){
-		return h
-	}else{
-		return h-12;
-	}
+	return h == 0 ? 12 : h <= 12 ? h : h-12;
+	// if(h == 0){
+	// 	return 12;
+	// }else if(h <= 12){
+	// 	return h
+	// }else{
+	// 	return h-12;
+	// }
 };
 
 Blog.prototype.getRealMinutes = function(m){
@@ -281,11 +282,12 @@ Blog.prototype.getRealMinutes = function(m){
 }
 
 Blog.prototype.getAMPM = function(h){
-	if(h >= 12){
-		return 'PM';
-	}else{
-		return 'AM';
-	}
+	return h >= 12 ? 'PM' : 'AM';
+	// if(h >= 12){
+	// 	return 'PM';
+	// }else{
+	// 	return 'AM';
+	// }
 };
 
 // listener functions
@@ -308,7 +310,6 @@ Blog.prototype.init = function(){
 	}, false);
 	this.getBlog();
 };	
-//Blog.prototype.init.bind(this); // testing something
 
 
 
